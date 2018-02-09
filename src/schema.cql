@@ -125,4 +125,3 @@ PRIMARY KEY(sensor_serial_number, timestamp, value)
 
 
 
-
