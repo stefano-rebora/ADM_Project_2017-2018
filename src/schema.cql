@@ -75,7 +75,7 @@ PRIMARY KEY(patient_ID, measurement_timestamp, profile_typology, sensor_serial_n
 
 ReportInformation ( 
 patient_ID text, 
-date int, 
+date int,
 typology text, 
 written_by int, 
 start_date timestamp, 
