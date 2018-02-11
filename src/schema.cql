@@ -1,3 +1,9 @@
+DROP KEYSPACE adm_project;
+
+CREATE KEYSPACE adm_project WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };
+
+USE adm_project;
+
 CREATE TABLE Doctor (
 doctor_ID int PRIMARY KEY,
 password text,
@@ -18,12 +24,12 @@ laboratory_code text
 
 CREATE TABLE Treatment (
 patient_ID text,
-start_date int,
+start_date date,
 typology text,
-end_date int,
+end_date date,
 prescribed_by int,
 description text,
-date_of_prescription int,
+date_of_prescription date,
 PRIMARY KEY(patient_ID, start_date, typology)
 );
 
@@ -31,12 +37,12 @@ CREATE TABLE ProfileInformation (
 patient_ID text, 
 typology text, 
 prepared_by int, 
-date timestamp, 
+date date, 
 description text,
 PRIMARY KEY(patient_ID, typology)
 );
 
-ProfileRecommendedValues (
+CREATE TABLE ProfileRecommendedValues (
 patient_ID text, 
 typology text, 
 physiological_parameter text, 
@@ -46,24 +52,24 @@ measurement_unit text,
 PRIMARY KEY(patient_ID, typology, physiological_parameter)
 );
 
-Patient (
+CREATE TABLE Patient (
 patient_health_code text PRIMARY KEY, 
 password text, 
 name text, 
 surname text, 
 date_of_birth int, 
-telephone_number int, 
+telephone_number text, 
 home_address text
 );
 
-PatientSensors ( 
+CREATE TABLE PatientSensors ( 
 patient_ID text, 
 sensor_typology text, 
 sensor_serial_number int,
 PRIMARY KEY(patient_ID, sensor_typology)
 );
 
-Warning (
+CREATE TABLE Warning (
 patient_ID text, 
 measurement_timestamp timestamp,  
 profile_typology text, 
@@ -73,35 +79,35 @@ warning_timestamp timestamp,
 PRIMARY KEY(patient_ID, measurement_timestamp, profile_typology, sensor_serial_number, measurement_value)
 );
 
-ReportInformation ( 
+CREATE TABLE ReportInformation ( 
 patient_ID text, 
-date int,
+date timestamp,
 typology text, 
 written_by int, 
-start_date timestamp, 
-end_date timestamp, 
+start_date date, 
+end_date date, 
 notes text,
 PRIMARY KEY(patient_ID, date, typology, written_by)
 );
 
-ReportValues (
+CREATE TABLE ReportValues (
 patient_ID text, 
-date int, 
+date timestamp, 
 typology text, 
 written_by int, 
 physiological_parameter text, 
 computed_value double, 
-measurement_unit text
+measurement_unit text,
 PRIMARY KEY(patient_ID, date, typology, written_by, physiological_parameter)
 );
 
-Sensor (
+CREATE TABLE Sensor (
 sensor_serial_number int PRIMARY KEY, 
 typology text, 
 description text,
 );
 
-Measurement (
+CREATE TABLE Measurement (
 sensor_serial_number int, 
 timestamp timestamp, 
 value double, 
