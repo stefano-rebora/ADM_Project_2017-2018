@@ -33,6 +33,8 @@ date_of_prescription date,
 PRIMARY KEY(patient_ID, start_date, typology)
 );
 
+CREATE INDEX doctor_treatment ON adm_project.treatment (prescribed_by);
+
 CREATE TABLE ProfileInformation (
 patient_ID text, 
 typology text, 
