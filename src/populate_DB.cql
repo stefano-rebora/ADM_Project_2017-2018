@@ -51,3 +51,19 @@ COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '.
 COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '../datasets/measurements_dataset_6.csv' WITH HEADER=TRUE;
 
 COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '../datasets/measurements_dataset_7.csv' WITH HEADER=TRUE;
+
+COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '../datasets/measurements_dataset_8.csv' WITH HEADER=TRUE;
+
+COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '../datasets/measurements_dataset_9.csv' WITH HEADER=TRUE;
+
+COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '../datasets/measurements_dataset_10.csv' WITH HEADER=TRUE;
+
+COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '../datasets/measurements_dataset_11.csv' WITH HEADER=TRUE;
+
+COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '../datasets/measurements_dataset_12.csv' WITH HEADER=TRUE;
+
+COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '../datasets/measurements_dataset_13.csv' WITH HEADER=TRUE;
+
+COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '../datasets/measurements_dataset_14.csv' WITH HEADER=TRUE;
+
+COPY Measurement (sensor_serial_number,timestamp,value,measurement_unit) FROM '../datasets/measurements_dataset_15.csv' WITH HEADER=TRUE;
