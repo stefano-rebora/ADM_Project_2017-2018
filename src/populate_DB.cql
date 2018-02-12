@@ -1,5 +1,7 @@
 USE adm_project;
 
+CONSISTENCY THREE;
+
 COPY Doctor (doctor_ID,password,name,surname,date_of_birth,specialization) FROM '../datasets/doctors_dataset.csv' WITH HEADER=TRUE;
 
 COPY LaboratoryTechnician (technician_ID,password,name,surname,date_of_birth,laboratory_code) FROM '../datasets/technicians_dataset.csv' WITH HEADER=TRUE;
