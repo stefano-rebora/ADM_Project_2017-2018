@@ -51,7 +51,7 @@ CONSISTENCY LOCAL_QUORUM;
 	-- The following insert is repeated for a variable number of columns (the number of physiological_parameters)	
 
 	INSERT INTO ReportValues (patient_ID, date, typology, written_by, physiological_parameter, computed_value, measurement_unit)
-	VALUES ('504-86-182','2018-02-10','typology_example', \00000007, 'my_first_parameter', 5.40 ,'kPA');
+	VALUES ('504-86-182','2018-02-10','typology_example', 00000007, 'my_first_parameter', 5.40 ,'kPA');
 
 
 -- 9) Modify a report made by the technician for a patient (or remove)
