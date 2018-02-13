@@ -5,7 +5,7 @@
 * **Andrea Canepa - Stefano Rebora** - *Università degli studi di Genova - ADM 2017-2018*
 
 The aim of this project is the design and the implementation of the distributed data management layer for
-a remote patient monitoring service. We have choosen Cassandra as reference technology and we have relied 
+a remote patient monitoring service. We have chosen Cassandra as reference technology and we have relied 
 on CQL for workload implementation.
 
 ## Project Structure
