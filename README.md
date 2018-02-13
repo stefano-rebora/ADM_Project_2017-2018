@@ -19,12 +19,12 @@ on CQL for workload implementation.
 * For the creation of the cluster, download and install the Cassandra Cluster Manager from here: https://github.com/riptano/ccm
 
 * Create the cluster with the following commands:
-	ccm create cluster_test -v 3.11.1
-	ccm populate -n 6
-	ccm start
+	1) ccm create cluster_test -v 3.11.1
+	2) ccm populate -n 6
+	3) ccm start
 	
 * Open cqlsh from one node:
-	ccm node1 cqlsh
+	1) ccm node1 cqlsh
 	
 * Run the script with the SOURCE command in the following order:
 	1) schema.cql
