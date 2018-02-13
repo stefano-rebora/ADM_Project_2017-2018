@@ -1,3 +1,5 @@
+-- DB SCHEMA
+
 DROP KEYSPACE adm_project;
 
 CREATE KEYSPACE adm_project WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };
@@ -70,6 +72,8 @@ sensor_typology text,
 sensor_serial_number int,
 PRIMARY KEY(patient_ID, sensor_typology)
 );
+
+CREATE INDEX sensor_number ON adm_project.PatientSensors (sensor_serial_number);
 
 CREATE TABLE Warning (
 patient_ID text, 

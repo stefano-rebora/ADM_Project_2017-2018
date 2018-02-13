@@ -1,6 +1,12 @@
+-- DB POPULATION
+
 USE adm_project;
 
+-- Insert in each replica
+
 CONSISTENCY THREE;
+
+
 
 COPY Doctor (doctor_ID,password,name,surname,date_of_birth,specialization) FROM '../datasets/doctors_dataset.csv' WITH HEADER=TRUE;
 
