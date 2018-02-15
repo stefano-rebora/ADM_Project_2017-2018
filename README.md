@@ -1,6 +1,6 @@
 # ADM_Project_2018-2018
 
-## Author
+## Authors
 
 * **Andrea Canepa - Stefano Rebora** - *Università degli studi di Genova - ADM 2017-2018*
 
